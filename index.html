@@ -1,43 +1,168 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<title>Wind Farm Layout Optimization Competition</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Wind Farm Layout Optimization Competition</title>
+
+  <!-- Bootstrap, because I'm lazy -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+  <script src="jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <!--link rel="stylesheet" type="text/css" href="styles.css"-->
+  <script type="text/javascript">
+    $('body').scrollspy({ target: '.navbar'});
+  </script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" style="padding-top: 70px;">
 
-<h1>Wind Farm Layout Optimization Competition</h1>
-<div id="navigation">
-<ul inline>
-<li><a href="http://www.irit.fr/wind-competition/">Home</a></li>
-<li><a href="http://www.irit.fr/wind-competition/details.html">Technical details</a></li>
-<li><a href="http://www.irit.fr/wind-competition/evaluation.html">Evaluations</a></li>
-<li><a href="http://www.irit.fr/wind-competition/prize.html">Prize</a></li>
-<li><a href="http://www.irit.fr/wind-competition/schedule.html">Important dates</a></li>
-<li><a href="http://www.irit.fr/wind-competition/contacts.html">Contacts</a></li>
-</ul>
-</div>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://www.irit.fr/wind-competition">Wind Farm Layout Competition</a>
+      </div>
+      <div id="navigation" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#details">Technical details</a></li>
+          <li><a href="#evaluations">Evaluations</a></li>
+          <li><a href="#prize">Prize</a></li>
+          <li><a href="#schedule">Important dates</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<h2>Introduction</h2>
-<p>Wind farm design has long been a favored application across artificial life due to its complexity, the wake capture of a field being a difficult value to optimize analytically, and its pertinence to the world of alternative energy. We propose the following competition to create a basis of comparison for the existing algorithms and to encourage both new ways to solve the wind optimization problem and a new mindset for the optimization goal.</p>
+  <div class="container" id="home">
+    <h1>Wind Farm Layout Optimization Competition</h1>
+  </div>
+  <div class="container">
+    <div id="intro">
+      <h2>Introduction</h2>
 
-<h2>Technical details</h2>
-<p>The competition goal will be split in two tracks:
-<ul> <li><b>Fixed number of turbines.</b> The first track tackles the problem the most common in the wind energy community. The aim is to optimization of the energy capture of a layout given a fixed number of turbines.</li><li><b>Variable number of turbines.</b> The aim of this track is to implant as much as turbines in a layout given a minimum wake free ratio (the output energy over the theoretical output energy of the layout). This problem can be expanded to evaluate the benefit of adding a turbine to a field based on local constraints such as price and cabling, provides a more realistic challenge.</li>
-</ul>
-</p>
-<p>All competitors will be provided with a standard and optimized wake effect model, the basis for both optimization problems, and a basic scenario consisting of sample wind data and wind farm geography and obstacles. These data will be available on this website.</p><p>Different implementations of the wake model besides the provided C++, Matlab and java versions will have to be approved and validated in advance. They will also be available on this website.</p>
-<h2>Evaluations</h2>
-<p>During the competition, contestants will be given:
-<ul><li>a set of 5 completely new scenarios and layouts to optimize,</li><li>5000 layout evaluations (usually the most computational part of the optimization) for the 5 layouts to optimize (the stop criterion of the algorithm will be therefore another challenge).</li>
-</ul>
-</p><p>Competitors will be allowed to enter either or both tracks and rankings and prizes will be given for each track. They will be compared on each layout to optimize according to the energy output for the first track and the number of turbines implanted on the second track (and energy output for ex-aequo) and ranked with point system:
-<ul><li>10 points given to the best approach</li><li>6 points given to the second best approach</li><li>4 points to the third</li><li>3 points to the forth</li><li>2 points to the fifth</li><li>1 point to the sixth</li>
-</ul>The winner of each track will be the one with the maximum of points.</p><p>The optimizer, with a compilation and/or execution readme file, will have to be submitted on this website. The optimizer must be compatible with a standard linux machine. The arguments of the programs are the list of XML scenario file names and associated the number of turbine to opmitize for the fixed number of turbine track or the minimal wake free ratio for the variable number of turbine track. The optimizer must display for each layout generated:
-<ul><li>the number of evaluations used to produce the layout,</li><li>the energy output of the final layout,</li><li>the number of turbines used on the layout.</li>
-</ul>
-</p><h2>Prize</h2><p>We are doing our best to find a prize for each track of the competition.</p><h2>Tentative schedule</h2><p><b>February 2014:</b> provided layouts and wake model code online<br/><b>June 2014:</b> submission deadline of the instances</p><h2>Competition Organizers</h2>
-<p><b>Sylvain Cussat-Blanc:</b> sylvain dot cussat-blanc at irit dot fr<br/><b>Dennis Wilson:</b> dwilson at mit dot edu<br/><b>Kalyan Veeramachaneni:</b> kalyan at csail dot mit dot edu<br/>
-</p>
+      <p>Wind farm design has long been a favored application across artificial
+      life due to its complexity, the wake capture of a field being a difficult
+      value to optimize analytically, and its pertinence to the world of
+      alternative energy. We propose the following competition to create a
+      basis of comparison for the existing algorithms and to encourage both new
+      ways to solve the wind optimization problem and a new mindset for the
+      optimization goal.</p>
+    </div>
+
+    <div id="details" style="padding-top: 70px;">
+      <h2>Technical details</h2>
+
+      <p>The competition goal will be split in two tracks:
+
+      <ul>
+
+        <li><b>Fixed number of turbines.</b> The first track tackles the
+        problem the most common in the wind energy community. The aim is to
+        optimization of the energy capture of a layout given a fixed number of
+        turbines.</li>
+
+        <li><b>Variable number of turbines.</b> The aim of this track is to
+        implant as much as turbines in a layout given a minimum wake free ratio
+        (the output energy over the theoretical output energy of the layout).
+        This problem can be expanded to evaluate the benefit of adding a
+        turbine to a field based on local constraints such as price and
+        cabling, provides a more realistic challenge.</li>
+
+      </ul>
+      </p>
+
+      <p>All competitors will be provided with a standard and optimized wake
+      effect model, the basis for both optimization problems, and a basic
+      scenario consisting of sample wind data and wind farm geography and
+      obstacles. These data will be available on this website.</p>
+
+      <p>Different implementations of the wake model besides the provided C++,
+      Matlab and java versions will have to be approved and validated in
+      advance. They will also be available on this website.</p>
+    </div>
+
+    <div id="evaluations">
+      <h2>Evaluations</h2>
+
+      <p>During the competition, contestants will be given:
+
+      <ul>
+
+        <li>a set of 5 completely new scenarios and layouts to optimize,</li>
+
+        <li>5000 layout evaluations (usually the most computational part of the
+        optimization) for the 5 layouts to optimize (the stop criterion of the
+        algorithm will be therefore another challenge).</li>
+
+      </ul>
+      </p>
+
+      <p>Competitors will be allowed to enter either or both tracks and rankings and prizes will be given for each track. They will be compared on each layout to optimize according to the energy output for the first track and the number of turbines implanted on the second track (and energy output for ex-aequo) and ranked with point system:
+
+      <ul>
+        <li>10 points given to the best approach</li>
+        <li>6 points given to the second best approach</li>
+        <li>4 points to the third</li>
+        <li>3 points to the forth</li>
+        <li>2 points to the fifth</li>
+        <li>1 point to the sixth</li>
+      </ul>
+
+      The winner of each track will be the one with the maximum of points.</p>
+
+      <p>The optimizer, with a compilation and/or execution readme file, will
+      have to be submitted on this website. The optimizer must be compatible
+      with a standard linux machine. The arguments of the programs are the list
+      of XML scenario file names and associated the number of turbine to
+      opmitize for the fixed number of turbine track or the minimal wake free
+      ratio for the variable number of turbine track. The optimizer must
+      display for each layout generated:
+
+      <ul>
+        <li>the number of evaluations used to produce the layout,</li>
+        <li>the energy output of the final layout,</li>
+        <li>the number of turbines used on the layout.</li>
+      </ul>
+
+      </p>
+
+    </div>
+
+    <div id="prize">
+
+      <h2>Prize</h2>
+
+      <p>We are doing our best to find a prize for each track of the competition.</p>
+
+    </div>
+
+    <div id="schedule">
+
+      <h2>Tentative schedule</h2>
+
+      <p><b>February 2014:</b> provided layouts and wake model code online
+      <br/>
+      <b>June 2014:</b> submission deadline of the instances</p>
+
+    </div>
+
+    <div id="contacts">
+
+      <h2>Competition Organizers</h2>
+
+      <p><b>Sylvain Cussat-Blanc:</b> sylvain dot cussat-blanc at irit dot fr
+      <br/><b>Dennis Wilson:</b> dwilson at mit dot edu
+      <br/><b>Kalyan Veeramachaneni:</b> kalyan at csail dot mit dot edu
+      </p>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
