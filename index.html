@@ -13,12 +13,12 @@
   <script src="jquery.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
-  <!--link rel="stylesheet" type="text/css" href="styles.css"-->
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="text/javascript">
     $('body').scrollspy({ target: '.navbar'});
   </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" style="padding-top: 70px;">
+<body data-spy="scroll" data-target=".navbar">
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -38,11 +38,11 @@
     </div>
   </nav>
 
-  <div class="container" id="home">
+  <div class="container titre" id="home">
     <h1>Wind Farm Layout Optimization Competition</h1>
   </div>
   <div class="container">
-    <div id="intro">
+    <div class="row" id="intro">
       <h2>Introduction</h2>
 
       <p>Wind farm design has long been a favored application across artificial
@@ -52,9 +52,14 @@
       basis of comparison for the existing algorithms and to encourage both new
       ways to solve the wind optimization problem and a new mindset for the
       optimization goal.</p>
+
+      <br />
+      <img src="LayoutProblem.png" width="500" height="auto" class="centered">
     </div>
 
-    <div id="details" style="padding-top: 70px;">
+    <hr>
+
+    <div id="details" class="row titre">
       <h2>Technical details</h2>
 
       <p>The competition goal will be split in two tracks:
@@ -86,7 +91,9 @@
       advance. They will also be available on this website.</p>
     </div>
 
-    <div id="evaluations">
+    <hr>
+
+    <div id="evaluations" class="row titre">
       <h2>Evaluations</h2>
 
       <p>During the competition, contestants will be given:
@@ -102,7 +109,11 @@
       </ul>
       </p>
 
-      <p>Competitors will be allowed to enter either or both tracks and rankings and prizes will be given for each track. They will be compared on each layout to optimize according to the energy output for the first track and the number of turbines implanted on the second track (and energy output for ex-aequo) and ranked with point system:
+      <p>Competitors will be allowed to enter either or both tracks and
+      rankings and prizes will be given for each track. They will be compared
+      on each layout to optimize according to the energy output for the first
+      track and the number of turbines implanted on the second track (and
+      energy output for ex-aequo) and ranked with point system:
 
       <ul>
         <li>10 points given to the best approach</li>
@@ -133,7 +144,9 @@
 
     </div>
 
-    <div id="prize">
+    <hr>
+
+    <div id="prize" class="row titre">
 
       <h2>Prize</h2>
 
@@ -141,7 +154,9 @@
 
     </div>
 
-    <div id="schedule">
+    <hr>
+
+    <div id="schedule" class="row titre">
 
       <h2>Tentative schedule</h2>
 
@@ -151,7 +166,9 @@
 
     </div>
 
-    <div id="contacts">
+    <hr>
+
+    <div id="contacts" class="row titre">
 
       <h2>Competition Organizers</h2>
 
@@ -161,6 +178,8 @@
       </p>
 
     </div>
+
+    <div class="row titre">&nbsp;</div>
 
   </div>
 
