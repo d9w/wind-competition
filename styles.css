@@ -30,15 +30,28 @@
 body {
   padding-top: 70px;
   background-color: #FFFFFF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #556268;
 }
 
+/*
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
+}
+*/
+
+p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 27px;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 27px;
 }
 
 .centered {
@@ -48,15 +61,12 @@ body {
 }
 
 .titre {
-  padding-top: 70px;
+  padding-top: 100px;
+  padding-bottom: 70px;
 }
 
 hr {
-  color: #FFDD00
-}
-
-hr.orange {
-  color: #FFBA00
+  border-color: #A5B8C9;
 }
 
 a:link {
@@ -72,7 +82,7 @@ a:hover {
 }
 
 h1 {color: #A5B8C9; text-align: center;}
-h2 {color: #FF9900;} /* Orange vif */
+h2 {color: #FF9900; text-align: center;} /* Orange vif */
 h3 {color: #E37906;} /* Orange foncé */
 h4 {color: #5D8BA2;} /* Même gris que le fond des menus de niveau 2 et 3 */
 h5 {color: #556268;} /* Même gris que le texte */
