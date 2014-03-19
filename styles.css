@@ -70,15 +70,19 @@ hr {
 }
 
 a:link {
-  color: #556268;
+  color: #A5B8C9;
 }
 
 a:visited {
-  color: #556268;
+  color: #A5B8C9;
 }
 
 a:hover {
   color: #FFBA00;
+}
+
+p a {
+  font-weight: bold;
 }
 
 h1 {color: #A5B8C9; text-align: center;}
